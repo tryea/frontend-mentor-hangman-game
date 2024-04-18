@@ -42,7 +42,7 @@ export default function HangmanGamePage() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <div className="relative w-full flex flex-row justify-between items-center h-[48px] sm:h-[64px] lg:h-[163px] mt-[46px] sm:mt-[61px] lg:mt-[80px]">
+      <div className="relative w-full flex flex-row justify-between items-center h-[48px] sm:h-[64px] lg:h-[163px] mt-[46px] sm:mt-[61px] lg:mt-[60px]">
         <div className="flex flex-row gap-4 sm:gap-8 lg:gap-[57px] h-full items-center">
           <button
             type="button"
@@ -64,8 +64,8 @@ export default function HangmanGamePage() {
         </div>
       </div>
 
-      <div className="flex flex-1 max-h-full overflow-hidden flex-col mt-[56px] mb-8 gap-8">
-        <div className="flex flex-row flex-wrap gap-3">
+      <div className="flex flex-1 max-h-full overflow-hidden flex-col mt-[56px] mb-8 sm:mt-28 sm:mb-28 lg:mb-14 lg:mt-4 gap-8">
+        <div className="flex flex-1 flex-row flex-wrap gap-3">
           {currentWord!.split("").map((char, idx) => {
             if (char === " ") {
               return (
