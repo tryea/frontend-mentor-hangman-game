@@ -33,6 +33,8 @@ const config: Config = {
           "linear-gradient(to bottom, #344ABA 0%, rgba(0, 20, 121, 0.83) 100% )",
         "pink-gradient":
           "linear-gradient(to bottom, #FE71FE 0%, #7199FF 100% )",
+        "pink-gradient-hover":
+          "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), linear-gradient(to bottom, #FE71FE 0%, #7199FF 100% )",
         "how-to-overlay-gradient":
           "linear-gradient(to bottom, #1A043A 0%, #151278 70%, #2B1677 100% )",
       },

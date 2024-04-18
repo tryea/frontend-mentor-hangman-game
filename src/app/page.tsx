@@ -11,7 +11,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="bg-pink-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center"
+          className="bg-pink-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center hover:bg-pink-gradient-hover"
         >
           <div className="relative w-[55px] h-[55px] sm:w-[66px] sm:h-[66px] flex items-center justify-center">
             <Image src={`/images/icon-play.svg`} fill alt="play-icon" />
