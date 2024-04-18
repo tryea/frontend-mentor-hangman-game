@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Mouse_Memoirs } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const mouseMemoirs = Mouse_Memoirs({
+  subsets: ["latin"],
+  weight: ["400"],
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${mouseMemoirs.className} overflow-hidden`}>
+        {children}
+      </body>
     </html>
   );
 }
