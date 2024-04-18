@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="bg-main-play-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center"
+          className="bg-pink-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center"
         >
           <div className="relative w-[55px] h-[55px] sm:w-[66px] sm:h-[66px] flex items-center justify-center">
             <Image src={`/images/icon-play.svg`} fill alt="play-icon" />
@@ -21,7 +22,7 @@ export default function Home() {
           type="button"
           className="mt-[57px] bg-blue w-full h-[62px] flex items-center justify-center rounded-full text-white text-heading-s shadow-main_how_to_shadow"
         >
-          HOW TO PLAY
+          <Link href={"/how-to-play"}>HOW TO PLAY</Link>
         </button>
       </div>
     </main>
