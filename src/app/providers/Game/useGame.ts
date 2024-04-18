@@ -12,12 +12,19 @@ export type Categories =
 
 export type GameState = {
   category: null | Categories;
-  setCategory: (category: Categories) => void;
+  setCategory: (category: Categories | null) => void;
   health: number;
   wordList: string[];
   currentWord: string | null;
   decreaseHealth: () => void;
   nextGame: () => void;
+  openModal: () => void;
+  closeModal: () => void;
+  showMenuModal: boolean;
+  statusGame: "Paused" | "Win" | "Lose" | "Played";
+  changeStatusGame: (statusGame: "Paused" | "Win" | "Lose" | "Played") => void;
+  selectedCharacter: string[];
+  setSelectedCharacter: (char: string) => void;
 };
 
 export const useGame = create<GameState>((set) => ({
@@ -29,11 +36,13 @@ export const useGame = create<GameState>((set) => ({
         wordList: string[];
         health: number;
         currentWord: string | null;
+        selectedCharacter: string[];
       } = {
         category: category,
         wordList: [],
         health: 8,
         currentWord: null,
+        selectedCharacter: [],
       };
 
       if (category !== null) {
@@ -51,10 +60,21 @@ export const useGame = create<GameState>((set) => ({
 
       return newState;
     }),
+
   health: 8,
+
   decreaseHealth: () => {
-    set((state) => ({ health: state.health - 1 }));
+    set((state) => {
+      const lose = state.health - 1 === 0;
+      const newState = {
+        health: state.health - 1,
+        showMenuModal: !!lose,
+        statusGame: lose ? "Lose" : state.statusGame,
+      };
+      return newState;
+    });
   },
+
   nextGame: () => {
     set((state) => {
       const randomIndex = Math.floor(Math.random() * state.wordList.length);
@@ -66,9 +86,32 @@ export const useGame = create<GameState>((set) => ({
         wordList: state.wordList.filter((val) => {
           return val !== word;
         }),
+        selectedCharacter: [],
       };
     });
   },
   wordList: [],
   currentWord: null,
+  showMenuModal: false,
+  openModal: () => {
+    set((state) => ({ showMenuModal: true }));
+  },
+
+  closeModal: () => {
+    set((state) => ({ showMenuModal: false }));
+  },
+
+  statusGame: "Played",
+  changeStatusGame: (statusGame: GameState["statusGame"]) => {
+    set(() => ({ statusGame }));
+  },
+
+  selectedCharacter: [],
+  setSelectedCharacter: (char) => {
+    set((state) => {
+      return {
+        selectedCharacter: [...state.selectedCharacter, char],
+      };
+    });
+  },
 }));

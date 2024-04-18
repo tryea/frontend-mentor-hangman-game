@@ -39,6 +39,8 @@ const config: Config = {
           "linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), linear-gradient(to bottom, #2463FF 0%, #2463FF 100% )",
         "how-to-overlay-gradient":
           "linear-gradient(to bottom, #1A043A 0%, #151278 70%, #2B1677 100% )",
+        "modal-bg-gradient":
+          "linear-gradient(to bottom, #1A043A 0%, #151278 70%, #2B1677 100% )",
       },
     },
   },
