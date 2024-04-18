@@ -8,15 +8,16 @@ export default function Home() {
         <div className="absolute w-[263px] h-[130.2px] sm:w-[373.69px] sm:h-[185px] left-[32px] sm:left-[111px] top-[-65.1px] sm:top-[-110px]">
           <Image src={`/images/logo.svg`} alt="logo" fill />
         </div>
-
-        <button
-          type="button"
-          className="bg-pink-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center hover:bg-pink-gradient-hover"
-        >
-          <div className="relative w-[55px] h-[55px] sm:w-[66px] sm:h-[66px] flex items-center justify-center">
-            <Image src={`/images/icon-play.svg`} fill alt="play-icon" />
-          </div>
-        </button>
+        <Link href={"/play-game"}>
+          <button
+            type="button"
+            className="bg-pink-gradient w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] shadow-main_play_shadow rounded-full flex items-center justify-center hover:bg-pink-gradient-hover"
+          >
+            <div className="relative w-[55px] h-[55px] sm:w-[66px] sm:h-[66px] flex items-center justify-center">
+              <Image src={`/images/icon-play.svg`} fill alt="play-icon" />
+            </div>
+          </button>
+        </Link>
 
         <button
           type="button"
