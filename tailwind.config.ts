@@ -46,35 +46,35 @@ const config: Config = {
     require("tailwind-scrollbar"),
     plugin(function ({ addBase, addComponents, addUtilities, theme }) {
       addUtilities({
-        ".text-heading-s": {
+        ".heading-s": {
           fontSize: "32px",
           lineHeight: "1.2",
           fontWeight: theme("fontWeight.normal"),
           letterSpacing: "0.05em",
         },
 
-        ".text-heading-m": {
+        ".heading-m": {
           fontSize: "48px",
           lineHeight: "1.2",
           fontWeight: theme("fontWeight.normal"),
           letterSpacing: "0.05em",
         },
 
-        ".text-heading-l": {
+        ".heading-l": {
           fontSize: "88px",
           lineHeight: "1.2",
           fontWeight: theme("fontWeight.normal"),
           letterSpacing: "0.05em",
         },
 
-        ".text-heading-xl": {
+        ".heading-xl": {
           fontSize: "136px",
           lineHeight: "1.2",
           fontWeight: theme("fontWeight.normal"),
           letterSpacing: "0.05em",
         },
 
-        ".text-body": {
+        ".body": {
           fontSize: "26px",
           lineHeight: "1.2",
           fontWeight: theme("fontWeight.normal"),

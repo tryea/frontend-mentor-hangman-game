@@ -60,12 +60,12 @@ export default function HowToPlayPage() {
                 </div>
 
                 <div style={{ gridArea: "name" }}>
-                  <p className="text-dark_navy text-[24px] leading-[1.2] tracking-[0.05em] sm:text-[40px] lg:text-heading-m lg:text-center">
+                  <p className="text-dark_navy text-[24px] leading-[1.2] tracking-[0.05em] sm:text-[40px] lg:heading-m lg:text-center">
                     {name}
                   </p>
                 </div>
                 <div style={{ gridArea: "content" }}>
-                  <p className=" text-ube text-[16px] leading-[1.2] tracking-[0.05em] sm:text-[20px] lg:text-center lg:text-body">
+                  <p className=" text-ube text-[16px] leading-[1.2] tracking-[0.05em] sm:text-[20px] lg:text-center lg:body">
                     {content}
                   </p>
                 </div>
