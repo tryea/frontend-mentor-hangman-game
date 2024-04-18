@@ -20,7 +20,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="mt-[57px] bg-blue w-full h-[62px] flex items-center justify-center rounded-full text-white text-heading-s shadow-main_how_to_shadow"
+          className="mt-[57px] bg-blue hover:bg-blue-hover w-full h-[62px] flex items-center justify-center rounded-full text-white text-heading-s shadow-main_how_to_shadow"
         >
           <Link href={"/how-to-play"}>HOW TO PLAY</Link>
         </button>
