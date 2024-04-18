@@ -6,7 +6,7 @@ import Link from "next/link";
 import categories from "@/data/categories.json";
 import BlueShadowButton from "@/components/BlueShadowButton";
 import { cn } from "@/utils/cn";
-import { useGame } from "../providers/Game";
+import { Categories, useGame } from "../providers/Game";
 
 export default function SelectCategoryPage() {
   const { setCategory } = useGame();
@@ -37,7 +37,7 @@ export default function SelectCategoryPage() {
           "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         )}
       >
-        {categories.map((category) => {
+        {(categories as Categories[]).map((category: Categories) => {
           return (
             <BlueShadowButton
               key={category}
